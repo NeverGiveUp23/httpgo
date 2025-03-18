@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"image"
 	"log"
 	"net/http"
 	"sync"
@@ -12,13 +11,13 @@ var mu sync.Mutex
 var count int
 
 func main() {
-	i := 100
-	var boiling float32 = 100
-	var names []string
-	var err error
-	var p image.Point
-	// keep in mind that := is a declaration, whereas = is an assignment
-	k, l := 0, 1
+	//i := 100
+	//var boiling float32 = 100
+	//var names []string
+	//var err error
+	//var p image.Point
+	//// keep in mind that := is a declaration, whereas = is an assignment
+	//k, l := 0, 1
 
 	http.HandleFunc("/", handler) // each request calls handler
 	http.HandleFunc("/count", counter)
