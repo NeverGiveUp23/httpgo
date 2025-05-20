@@ -1,11 +1,11 @@
 // Map(noun) is data structure that associates values (the keys) with others values. for example you might want to map names to ages
 let ages = {
-    Boris: 77,
-    Mike: 99,
-    Jess: 34
+  Boris: 77,
+  Mike: 99,
+  Jess: 34,
 };
 
-console.log(`${ages.Boris}`)
+console.log(`${ages.Boris}`);
 // -> 77
 
 // Object property names must be strings.
