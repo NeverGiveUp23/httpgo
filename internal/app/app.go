@@ -30,9 +30,9 @@ func NewApplication() (*Application, error) {
 	// logger instead of println
 	logger := log.New(os.Stdout, "", log.Ldate|log.Ltime)
 	// stores will go here
-
+	workoutStore := store.NewPostgresWorkoutStore(pgDB)
 	// handlers will go here
-	workoutHandler := api.NewWorkoutHandler()
+	workoutHandler := api.NewWorkoutHandler(workoutStore)
 
 	// reference to application
 	app := &Application{
