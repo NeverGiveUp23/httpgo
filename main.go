@@ -21,6 +21,9 @@ func main() {
 		panic(err)
 	} // panic == shutdown
 
+	// defer at the end of execution
+	defer app.DB.Close()
+
 	// http.HandleFunc("/health", HealthCheck)
 	r := routes.SetupRoutes(app)
 	server := &http.Server{
